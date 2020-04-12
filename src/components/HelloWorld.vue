@@ -12,81 +12,188 @@
 
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
-          Welcome to Vuetify
+          Welcome to Nano Playground
         </h1>
-
-        <p class="subheading font-weight-regular">
-          For help and collaboration with other Vuetify developers,
-          <br>please join our online
-          <a
-            href="https://community.vuetifyjs.com"
-            target="_blank"
-          >Discord Community</a>
-        </p>
+        <p>My playground created just for myself</p>
       </v-col>
 
-      <v-col
-        class="mb-5"
-        cols="12"
+
+      <v-timeline
+      :dense="$vuetify.breakpoint.smAndDown"
+      id="timeline"
       >
-        <h2 class="headline font-weight-bold mb-3">
-          What's next?
-        </h2>
+    <v-timeline-item
+      color="purple lighten-2"
+      fill-dot
+      right
 
-        <v-row justify="center">
-          <a
-            v-for="(next, i) in whatsNext"
-            :key="i"
-            :href="next.href"
-            class="subheading mx-3"
-            target="_blank"
+    >
+      <v-card>
+        <v-card-title class="purple lighten-2">
+          <v-icon
+            dark
+            size="42"
+            class="mr-4"
           >
-            {{ next.text }}
-          </a>
-        </v-row>
-      </v-col>
+            mdi-magnify
+          </v-icon>
+          <h2 class="display-1 white--text font-weight-light">生まれ</h2>
+        </v-card-title>
+        <v-container>
+          <v-row>
+            <v-col cols="12" md="10">
+              千葉県で生まれたが両親が中国人で生後数カ月で中国に左遷されました（楽しかったです）。強いて言うならもう少し中国にいて中国語ちゃんと喋れたかったなぁ。
+            </v-col>
+            <v-col
+              class="hidden-sm-and-down text-right"
+              md="2"
+            >
+              <v-icon size="64">mdi-calendar-text</v-icon>
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-card>
+    </v-timeline-item>
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          Important Links
-        </h2>
+    <v-timeline-item
+      color="amber lighten-1"
+      fill-dot
+      left
+      small
+    >
+      <v-card>
+        <v-card-title class="amber lighten-1 justify-end">
+          <h2 class="display-1 mr-4 white--text font-weight-light">学生①</h2>
+          <v-icon
+            dark
+            size="42"
+          >mdi-home-outline</v-icon>
+        </v-card-title>
+        <v-container>
+          <v-row>
+            <v-col cols="12" md="10">
+              日本に帰り2~3年で埼玉へ引っ越す、それからはずっと埼玉です。小・中学校は地元の公立学校でのほほんと生活しました。色々あって中学で内向的だったのが外向的になりました。
+            </v-col><v-col
+              class="hidden-sm-and-down text-right"
+              md="2"
+            >
+              <v-icon size="64">mdi-call-split</v-icon>
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-card>
+    </v-timeline-item>
 
-        <v-row justify="center">
-          <a
-            v-for="(link, i) in importantLinks"
-            :key="i"
-            :href="link.href"
-            class="subheading mx-3"
-            target="_blank"
+    <v-timeline-item
+      color="cyan lighten-1"
+      fill-dot
+      right
+    >
+      <v-card>
+        <v-card-title class="cyan lighten-1">
+          <v-icon
+            class="mr-4"
+            dark
+            size="42"
           >
-            {{ link.text }}
-          </a>
-        </v-row>
-      </v-col>
+            mdi-school-outline
+          </v-icon>
+          <h2 class="display-1 white--text font-weight-light">学生②</h2>
+        </v-card-title>
+        <v-container>
+          <v-row>
+            <v-col
+              cols="12"
+              md="12"
+            >
+              中学の成績がよく僕は幸いにも県でも有数の男子校に入れました。ここでは自分の人生を刺激する出会いが沢山あってその分思い出も自分の人生哲学のルートも、いろんなものを与えられた場所になりました。
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-card>
+    </v-timeline-item>
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          Ecosystem
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
-            target="_blank"
+    <v-timeline-item
+      color="red lighten-1"
+      fill-dot
+      left
+      small
+    >
+      <v-card>
+        <v-card-title class="red lighten-1 justify-end">
+          <h2 class="display-1 mr-4 white--text font-weight-light">学生③</h2>
+          <v-icon
+            dark
+            size="42"
           >
-            {{ eco.text }}
-          </a>
+            mdi-pill
+          </v-icon>
+        </v-card-title>
+        <v-container>
+          <v-row>
+            <v-col class="hidden-sm-and-down" md="2">
+              <v-icon size="64">mdi-doctor</v-icon>
+            </v-col>
+            <v-col cols="12" md="10">
+              だいぶ苦労の末ですが高校の成績も幸い良かったため医学部に入学することができました。大学一年生は受験の疲れからか突然始めた一人暮らしのせいかずっと友達と一緒にいろんなことしてました。学年が上がるに連れて自分の行く先が少しずつ現実味を帯びてきました。
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-card>
+    </v-timeline-item>
+
+    <v-timeline-item
+      color="green lighten-1"
+      fill-dot
+      right
+    >
+      <v-card>
+        <v-card-title class="green lighten-1">
+          <v-icon
+            class="mr-4"
+            dark
+            size="42"
+          >
+            mdi-brain
+          </v-icon>
+          <h2 class="display-1 white--text font-weight-light">学生④</h2>
+        </v-card-title>
+        <v-container>
+          <v-row>
+            <v-col>
+              医学の勉強は確かに楽しいですが、自分の一生を捧げる気にはなりません、自分にできる面白いことを探そうと少しプログラミングの勉強を始めてみます
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-card>
+    </v-timeline-item>
+    <v-timeline-item
+    color="lime dark-1"
+    fill-dot
+    left
+    small
+    >
+    <v-card>
+      <v-card-title class="lime dark-1">
+        <v-icon
+            class="mr-4"
+            dark
+            size="42"
+          >
+            mdi-road-variant
+        </v-icon>
+        <h2 class="display-1 white--text font-weight-light">Yet to be explored</h2>
+      </v-card-title>
+      <v-container>
+        <v-row>
+          <v-col>
+
+          </v-col>
         </v-row>
-      </v-col>
+      </v-container>
+    </v-card>
+    </v-timeline-item>
+  </v-timeline>
     </v-row>
   </v-container>
 </template>
@@ -96,56 +203,6 @@
     name: 'HelloWorld',
 
     data: () => ({
-      ecosystem: [
-        {
-          text: 'vuetify-loader',
-          href: 'https://github.com/vuetifyjs/vuetify-loader',
-        },
-        {
-          text: 'github',
-          href: 'https://github.com/vuetifyjs/vuetify',
-        },
-        {
-          text: 'awesome-vuetify',
-          href: 'https://github.com/vuetifyjs/awesome-vuetify',
-        },
-      ],
-      importantLinks: [
-        {
-          text: 'Documentation',
-          href: 'https://vuetifyjs.com',
-        },
-        {
-          text: 'Chat',
-          href: 'https://community.vuetifyjs.com',
-        },
-        {
-          text: 'Made with Vuetify',
-          href: 'https://madewithvuejs.com/vuetify',
-        },
-        {
-          text: 'Twitter',
-          href: 'https://twitter.com/vuetifyjs',
-        },
-        {
-          text: 'Articles',
-          href: 'https://medium.com/vuetify',
-        },
-      ],
-      whatsNext: [
-        {
-          text: 'Explore components',
-          href: 'https://vuetifyjs.com/components/api-explorer',
-        },
-        {
-          text: 'Select a layout',
-          href: 'https://vuetifyjs.com/layout/pre-defined',
-        },
-        {
-          text: 'Frequently Asked Questions',
-          href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions',
-        },
-      ],
     }),
   }
 </script>
